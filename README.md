@@ -11,3 +11,11 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
+In order to deploy contract you need to add .env file with following configuration:
+
+```shell
+INFURA_API_KEY=""
+GOERLI_PRIVATE_KEY=""
+ETHERSCAN_API_KEY=""
+PRIVATE_KEY=""
+```
