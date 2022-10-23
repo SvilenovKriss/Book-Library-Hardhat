@@ -24,6 +24,10 @@ contract BookLibrary is Ownable {
         uint256 copiesTaken;
     }
 
+    function getBooksLength() external view returns (uint256) {
+        return books.length;
+    }
+
     function addBook(string memory name, uint256 copies) external onlyOwner {
         Book memory _book = Book(books.length, name, copies);
         books.push(_book);
