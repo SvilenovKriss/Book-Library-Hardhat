@@ -19,4 +19,4 @@ GOERLI_PRIVATE_KEY=""
 ETHERSCAN_API_KEY=""
 PRIVATE_KEY=""
 ```
-Contract deployed on Goerli with address: 0x5fD9680E133631E2fA11f34fC963E28c27A4C299
+Contract deployed on Goerli with address: 0x2b8e770134daf7F35ec0F5ef5d7C48fa3d6f277d
