@@ -24,7 +24,9 @@ describe("BookLibrary", function () {
         it("Should create new book", async () => {
             await bookLibrary.addBook("Harry Potter", 20);
             const book = await bookLibrary.books(0);
+            const bookLength = await bookLibrary.getBooksLength();
 
+            expect(bookLength).to.equal(1);
             expect(book.id).to.equal(0);
             expect(book.name).to.equal("Harry Potter");
 
@@ -51,6 +53,7 @@ describe("BookLibrary", function () {
 
             const userBook = await bookLibrary.userBook(owner.address, 0);
 
+            expect(await bookLibrary.getUserBooks()).to.equal(1);
             expect(userBook.copiesTaken).equal(1);
             expect(await bookLibrary.userAddresses(0)).to.equal(owner.address);
             expect((await bookLibrary.books(0)).availableBooksInStore).to.equal(4);
